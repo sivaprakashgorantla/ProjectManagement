@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Projects</title>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">Add Projects</h1>
+    <form th:action="@{/saveProject}" th:object="${project}" method="post">
+        <table border="1" style="margin: 0 auto;">
+            <tr>
+                <td>Project Name :</td>
+                <td><input th:field="*{name}" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit" />
+                    <a href="getProjects">Cancel</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>
